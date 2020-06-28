@@ -1,40 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Yuktha Yashaswi</title>
-	<style>
+<style>
+	h3.hidden {
+		display: none;
+	}
+</style>
+<style>
+#my img {
+	position: absolute;
+	left: 1px;
+	bottom: 0px;
+	z-index: -2;
+    background-color: skyblue;
+    width: 150px;
+    border: 5px solid hotpink;
+    padding: 10px;
+    margin: 5px;
+}
+</style>
+<style>
 .myDiv {
   border: 3px outset black;
   background-color: white;
   text-align: center;
 }
 </style>
+
+<head>
+	<title>Yuktha Yashaswi</title>
+
 </head>
 <body>
 	<h1>Basic Knowledge On HTML</h1>
 
-	<h3>HTML(Hyper Text Markup Language):</h3>
+	<h3 class="hidden">HTML(Hyper Text Markup Language):</h3>
 
 	<h5>Yuktha Yashaswi</h5>
 	<h5>Mahatma Gandhi Institute of Technology</h5>
 	<h5><a href="file:///C:/Users/Dell/HTML/HTML/Courses.html">Electronics and Communication</a></h5>
 
 	<p>
-	<img src="https://www.geeksforgeeks.org/wp-content/uploads/html-768x256.png" alt="Introduction to HTML"
-	style="position:absolute;top:0;right:0;width:230px;height:140px;">
+	<div id="my">
+		<img src="https://www.geeksforgeeks.org/wp-content/uploads/html-768x256.png" alt="Introduction to HTML"  style="position:absolute;top:0;right:0;width:230px;height:140px;"></div>
     </p>
-
+    
 <div class="myDiv">
     <p>HTML is the standard markup language, it describes the structure of a web page.An HTML element is defined by a start tag,some content,and an end tag.In this code :-</p></div><br>
-
-	<p>1.)!DOCTYPE html--> this declares that the document is HTML5 document.<br>
-	2.)html-->this is the root element.<br>
-	3.)head-->this contains meta information of HTML page.<br>
-	4.)title-->Specifies a title.<br>
-	5.)body-->defines the document and only the content inside the body will be displayed.<br>
-	6.)h1-->large heading.<br>
-	7.)h3-->bit lesser large than h1 heading.<br>
-	8.)p-->this defines a paragraph.</p>
+    <p>
+    	
+    	1.)!DOCTYPE html--> this declares that the document is HTML5 document.<br>
+	    2.)html-->this is the root element.<br>
+	    3.)head-->this contains meta information of HTML page.<br>
+	    4.)title-->Specifies a title.<br>
+	    5.)body-->defines the document and only the content inside the body will be displayed.<br>
+	    6.)h1-->large heading.<br>
+	    7.)h3-->bit lesser large than h1 heading.<br>
+	   8.)p-->this defines a paragraph.</p>
 
 </body>
 </html>
