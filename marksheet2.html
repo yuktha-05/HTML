@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<style>
+    table {outline-color: black;}
+
+    table.groove {outline-style: groove;}
+
+</style>
+<head>
+	<title>Marksheet</title>
+<style>
+     th, td {
+		border: 2px solid black;
+		border-collapse: collapse;
+	}
+
+    tr:nth-child(even) {background-color: #D6EAF8 ;}
+    
+    th {
+  background-color: #D0D3D4;
+  color: black;
+}
+</style>
+<style>
+    
+    #excellent {
+        background-color: #9FFF33 ;
+    }
+    .header {
+        color: #D35400;
+        margin-left: 70px;
+    }
+</style>
+<body>
+	<h1 class="header">Tenth Marksheet:-</h1>
+
+	<table class="groove" style="width:40% ; margin-left: 80px">
+		<tr>
+			<th>S.No</th>
+			<th>Subjects</th>
+			<th>CGPA Points</th>
+
+        </tr>
+        <tr>
+        	<td>1</td>
+        	<td>MATHEMATICS</td>
+        	<td id="excellent">10</td>
+        </tr>
+        <tr>
+        	<td>2</td>
+        	<td>SOCIAL STUDIES</td>
+        	<td id="excellent">10</td> 
+        </tr>
+        <tr>
+        	<td>3</td>
+        	<td>SCIENCE</td>
+            <td id="excellent">10</td> 
+        </tr>
+        <tr>
+        	<td>4</td>
+        	<td>ENGLISH</td>
+        	<td id="excellent">10</td> 
+        </tr>
+        <tr>
+        	<td>5</td>
+        	<td>TELUGU</td>
+        	<td>9</td>
+        </tr>
+        <tr>
+            <td>6</td>
+        	<td>HINDI</td>
+        	<td>8</td>
+        </tr>
+        <tr>
+            <td style="text-align: right" colspan="2">TOTAL</td>
+            <td id="marks" ></td>
+        </tr>
+        <script>
+            var sum = totfunc();
+            document.getElementById("marks").innerHTML = sum;
+
+            function totfunc() {
+                return 10+10+10+10+9+8;
+            }
+        </script>
+        <tr>
+            <td style="text-align: right" colspan="2">AVG CGPA</td>
+            <td id="avgmark"></td>
+        </tr>
+        
+    </table>
+    <script>
+        
+        var avg = avgfunc(sum);
+        document.getElementById("avgmark").innerHTML = avg;
+        function avgfunc(sum) {
+            return sum/6;
+         }
+
+      
+        // Operators Method:
+        /*var a = 10;
+        var b = 10;
+        var c = 10;
+        var d = 10;
+        var e = 9;
+        var f = 8;
+        var total = a + b + c + d + e + f;
+         
+         document.getElementById("marks").innerHTML = total;
+        var avg = total/6;
+        document.getElementById("avgmark").innerHTML = avg;*/
+
+</script>
+</body>
+</head>
+</html>
+
+        	

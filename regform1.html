@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+<script>
+    function display() {
+  DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=700,height=300')
+  message = "<ul><li><b>FULL NAME: </b>" + document.regform.fname.value;
+  message += "<li><b> E-MAIL ADDRESS: </b>" + document.regform.clgname.value;
+  message += "<li><b> COLLEGE NAME: </b>" + document.regform.email.value;
+  message += "<li><b>PHONE NUMBER: </b>" + document.regform.phnno.value + "</ul>";
+  DispWin.document.write(message);
+}
+</script>
+</head>
+<body>
+
+    <h2>Fill in your details</h2>
+
+    <form id="sectionForm" action="/action_page.php" method="get" name="regform">
+        <label for="fname">Full Name* :</label><br><br>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="pwd">Password* :</label><br><br>
+        <input type="password" id="pwd" name="pwd"><br><br>
+        
+        <label for="clgname">College Name* :</label><br><br>
+        <input type="text" id="clgname" name="clgname"><br><br>
+        <label for="email">E-mail Address* :</label><br><br>
+        <input type="text" id="email" name="eamil"><br><br>
+        <label for="phnno">Phone Number* :</label><br><br>
+        <input type="text" pattern="[1-9]{1}[0-9]{9}" title="Invalid Number please give a valid phone number" required id="phnno" name="phnno"><br><br>
+        <p>SELECT YOUR SUBJECT <br>  
+
+           
+        <input type="checkbox" id="sub" name="Subject" value="Artificial Intelligence">
+        <label for="artificialintelligence">Artificial Intelligence</label><br>
+        <input type="checkbox" id="sub2" name="Subject" value="Embedded Systems">
+        <label for="embeddedsystems">Embedded Systems</label><br>
+        <input type="checkbox" id="sub3" name="Subject" value="VLSI Design">
+        <label for="vlsidesign">VLSI Design</label><br>
+        <input type="checkbox" id="sub4" name="Subject" value="Antenna and Wavepropagation">
+        <label for="antennaandwavepropagation">Antenna and Wavepropagation</label><br>
+        <input type="checkbox" id="sub5" name="Subject" value="Microprocessor and Microcontroller">
+        <label for="microprocessorandmicrocontroller">Microprocessor and Microcontroller</label><br>
+</p><br> 
+        <script>
+            (function() {
+    const form = document.querySelector('#sectionForm');
+    const checkboxes = form.querySelectorAll('input[type=checkbox]');
+    const checkboxLength = checkboxes.length;
+    const firstCheckbox = checkboxLength > 0 ? checkboxes[0] : null;
+
+    function init() {
+        if (firstCheckbox) {
+            for (let i = 0; i < checkboxLength; i++) {
+                checkboxes[i].addEventListener('change', checkValidity);
+            }
+
+            checkValidity();
+        }
+    }
+
+    function isChecked() {
+        for (let i = 0; i < checkboxLength; i++) {
+            if (checkboxes[i].checked) return true;
+        }
+
+        return false;
+    }
+
+    function checkValidity() {
+        const errorMessage = !isChecked() ? 'Select atleast one Subject' : '';
+        firstCheckbox.setCustomValidity(errorMessage);
+    }
+
+    init();
+})();
+        </script>
+
+    <p>Comments:  <textarea cols="55" name="Comment">  </textarea></p> 
+
+    <!--<input type="submit" value="Submit" name="Submit">-->  
+    <input type="submit" VALUE="Submit" onClick="display();"> 
+
+        <input type="reset" value="Reset" name="Reset">   
+
+             
+
+</form> 
+
+</body> 
+
+</html> 

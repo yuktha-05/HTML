@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Math.pow(a,b) returns the value of a to the power of b:</p>
+<p id="power"></p>
+<p>Math.sqrt(x) returns the square root of x:</p>
+<p id="square"></p>
+<p>Math.abs(y) returns the positive value of y:</p>
+<p id="absolute"></p>
+<p>Math.round(x) returns the value of x rounded to its nearest integer:</p>
+<p id="round"></p>
+<p>Math.ceil() rounds a number <strong>up</strong> to its nearest integer:</p>
+<p id="ceil"></p>
+<p>Math.floor(x) returns the value of x rounded <strong>down</strong> to its nearest integer:</p>
+<p id="floor"></p>
+<p>Math.sin(x) returns the sin of x (given in radians):</p>
+<p>Angle in radians = (angle in degrees) * PI / 180.</p>
+<p id="sin"></p>
+<p>Math.cos(x) returns the cosine of x (given in radians):</p>
+<p>Angle in radians = (angle in degrees) * PI / 180.</p>
+<p id="cos"></p>
+<script>
+document.getElementById("power").innerHTML = Math.pow(12,3);
+document.getElementById("square").innerHTML = Math.sqrt(169);
+document.getElementById("absolute").innerHTML = Math.abs(-10.5);
+document.getElementById("round").innerHTML = Math.round(10.7);
+document.getElementById("ceil").innerHTML = Math.ceil(10.7);
+document.getElementById("floor").innerHTML = Math.floor(10.7);
+document.getElementById("sin").innerHTML = "The sine value of 60 degrees is " + Math.sin(60 * Math.PI / 180);
+document.getElementById("cos").innerHTML = "The cosine value of 30 degrees is " + Math.cos(30 * Math.PI / 180);
+</script>
+
+</body>
+</html>
