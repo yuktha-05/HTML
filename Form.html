@@ -3,13 +3,38 @@
 <head>
 	<title>Registration Form</title>
 
-<body>
+<body onload="loadfunc()">
+    <h1 id="colorchange">REGISTRATION FORM(Click on me)</h1>
 
-	<h2>Fill in your details</h2>
+<script>
+document.getElementById("colorchange").onmouseover = function() {mouseOver()};
+document.getElementById("colorchange").onmouseout = function() {mouseOut()};
+
+function mouseOver() {
+  document.getElementById("colorchange").style.color = "red";
+}
+
+function mouseOut() {
+  document.getElementById("colorchange").style.color = "green";
+}
+</script>
+
+	<h2 id="colcha" onclick="myFunction()">Fill in your details(Click on me to see changes)</h2>
+    <script>
+function myFunction() {
+  document.getElementById("colcha").style.color = "royalblue";
+}
+</script>
 
 	<form action="/action_page.php" method="get">
 		<label for="fname">First Name* :</label><br><br>
-		<input type="text" id="fname" name="fname"><br><br>
+		<input type="text" id="fname" name="fname" onchange="myFunc()"><br><br>
+        <script>
+function myFunc() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
 		<label for="lname">Last Name* :</label><br><br>
 		<input type="text" id="lname" name="lname"><br><br>
 		<label for="clgname">College Name* :</label><br><br>
@@ -17,7 +42,12 @@
 		<label for="email">E-mail Address* :</label><br><br>
 		<input type="text" id="email" name="eamil"><br><br>
 		<label for="phnno">Phone Number :</label><br><br>
-		<input type="text" id="phnno" name="phnoo"><br><br>
+		<input type="text" id="phnno" name="phnoo" onkeydown="keyfunc()"><br><br>
+        <script>
+function keyfunc() {
+  alert("You pressed a key");
+}
+</script>
 		<label for="yearofstudying">Pursuing Year* :</label><br>
 		<input type="radio" id="Final Year" name="Year Of Studying" value="Final Year">
         <label for="finalyear">Final Year</label><br>
@@ -58,6 +88,11 @@
         <input type="submit" value="Submit">
 
     </form>
+    <script>
+function loadfunc() {
+  alert("Page is loaded");
+}
+</script>
 </body>
 </head>
 </html>

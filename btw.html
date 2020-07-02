@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="tc"></p>
+<script>
+var number = prompt("Enter 10-100");
+
+if (number > 10 && number < 100) {
+
+        alert("The number is between 10-100");
+        } else {
+       switch (false) {
+    case number < 10 && number > 100: alert("The number is not between 10-100");
+        break;
+    }
+    }
+    try {
+   if(number== "") throw "Empty"; 
+    if(number < 10) throw "too low";
+    if(number > 100) throw "too high";
+    if(isNaN(number)) throw "not a number";
+    number = Number(number);
+  
+}
+catch(err) {
+  document.getElementById("tc").innerHTML = "Input is:"+err;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="day"></p>
+
+<script>
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+var yyyy = today.getFullYear();
+var date = dd + '/' + mm + '/' + yyyy;
+
+console.log("Todays date is:  " + date);
+</script>
+
+</body>
+</html>
