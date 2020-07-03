@@ -17,13 +17,22 @@
   background-size: cover;
     }
   </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").toggle();
+  });
+});
+</script>
     
     
   </head>
   <body>
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#" style="font-style: italic ; font-size: 40px ; color: royalblue">FLUTTER</a>
+  <a class="navbar-brand" href="#" style="font-style: italic ; font-size: 40px ; color: royalblue"><p>FLUTTER</p></a>
+  <button style="font-style: italic ; font-size: 30px ; color: royalblue">Try it out !!</button>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

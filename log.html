@@ -29,6 +29,14 @@ $(document).ready(function(){
   });
 });
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").dblclick();
+  });
+});
+</script>
 
      </head>
   <body>
@@ -86,6 +94,7 @@ $(document).ready(function(){
   
   <button type="submit" class="btn btn-primary" style="margin-left: 100px">LOG IN </button>
 </form>
+<p ondblclick="alert('Your login process is successfully done.')"></p>
 
 
 </body>
